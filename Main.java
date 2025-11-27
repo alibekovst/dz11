@@ -2,9 +2,7 @@ package shop;
 
 import java.util.*;
 
-// ===============================
-// ABSTRACT USER
-// ===============================
+
 abstract class User {
     protected int id;
     protected String name;
@@ -35,9 +33,7 @@ abstract class User {
     }
 }
 
-// ===============================
-// CLIENT
-// ===============================
+
 class Client extends User {
     private int loyaltyPoints = 0;
 
@@ -50,9 +46,7 @@ class Client extends User {
     public int getLoyaltyPoints() { return loyaltyPoints; }
 }
 
-// ===============================
-// ADMIN
-// ===============================
+
 class Admin extends User {
     public Admin(int id, String name, String email, String address, String phone) {
         super(id, name, email, address, phone, "ADMIN");
@@ -63,9 +57,7 @@ class Admin extends User {
     }
 }
 
-// ===============================
-// CATEGORY
-// ===============================
+
 class Category {
     private int id;
     private String name;
@@ -76,9 +68,7 @@ class Category {
     }
 }
 
-// ===============================
-// PRODUCT
-// ===============================
+
 class Product {
     private int id;
     private String title;
@@ -105,9 +95,7 @@ class Product {
     public String getTitle() { return title; }
 }
 
-// ===============================
-// PROMO CODE
-// ===============================
+
 class PromoCode {
     private String code;
     private double discountPercent;
@@ -124,9 +112,7 @@ class PromoCode {
     }
 }
 
-// ===============================
-// PAYMENT
-// ===============================
+
 class Payment {
     private int id;
     private String type;
@@ -153,9 +139,7 @@ class Payment {
     }
 }
 
-// ===============================
-// COURIER
-// ===============================
+
 class Courier {
     private int id;
     private String name;
@@ -168,9 +152,7 @@ class Courier {
     }
 }
 
-// ===============================
-// DELIVERY
-// ===============================
+
 class Delivery {
     private int id;
     private String address;
@@ -199,9 +181,7 @@ class Delivery {
     }
 }
 
-// ===============================
-// REVIEW
-// ===============================
+
 class Review {
     private int id;
     private int rating;
@@ -222,9 +202,7 @@ class Review {
     }
 }
 
-// ===============================
-// ORDER
-// ===============================
+
 class Order {
     private int id;
     private Date createdAt;
@@ -274,9 +252,7 @@ class Order {
     }
 }
 
-// ===============================
-// FACTORY PATTERN
-// ===============================
+
 interface ProductFactory {
     Product createProduct(int id, String title, double price);
 }
@@ -293,9 +269,7 @@ class ClothingProductFactory implements ProductFactory {
     }
 }
 
-// ===============================
-// PUBLIC MAIN CLASS
-// ===============================
+
 public class Main {
     public static void main(String[] args) {
 
